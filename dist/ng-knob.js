@@ -109,6 +109,7 @@
                 svg.append("text").attr("class", "sub-text").attr("text-anchor", "middle").attr("font-size", fontSize).style("fill", this.options.subText.color).text(this.options.subText.text).attr("transform", "translate(" + this.options.size / 2 + ", " + (this.options.size / 2 + this.options.size * .15) + ")");
             }
         }
+        svg.append("circle").attr("cx", this.options.size / 2).attr("cy", 0).attr("r", 5);
         if (this.options.scale.enabled) {
             var radius, quantity, count = 0, angle = 0, data, startRadians = this.valueToRadians(this.options.min, this.options.max, this.options.endAngle, this.options.startAngle, this.options.min), endRadians = this.valueToRadians(this.options.max, this.options.max, this.options.endAngle, this.options.startAngle, this.options.min), diff = 0;
             if (this.options.startAngle !== 0 || this.options.endAngle !== 360) {

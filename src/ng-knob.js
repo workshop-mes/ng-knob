@@ -62,6 +62,16 @@
         elem.call(drag);
       }
     }
+
+    //On ajoute un cercle qui indique la fin de l'indicateur (valeur max)
+    if(this.options.startAngle === 180 && this.options.endAngle === 360){
+        svg.append('circle')
+            .attr('cx', this.options.size / 2)
+            .attr('cy', 8)
+            .attr('r', 5)
+            .attr('fill', '#4d4d4d');
+    }
+
     return elem;
   };
   /**
@@ -152,6 +162,7 @@
       .text(v + this.options.unit || "")
       .attr('transform', 'translate(' + ((this.options.size / 2)) + ', ' + ((this.options.size / 2) + (this.options.size*0.06)) + ')');
 
+
       if(this.options.subText.enabled) {
         fontSize = (this.options.size*0.07) + "px";
         if(this.options.subText.font !== 'auto') {
@@ -166,6 +177,10 @@
         .attr('transform', 'translate(' + ((this.options.size / 2)) + ', ' + ((this.options.size / 2) + (this.options.size*0.15)) + ')');
       }
     }
+      svg.append('circle')
+          .attr('cx', this.options.size / 2)
+          .attr('cy', 0)
+          .attr('r', 5);
     if(this.options.scale.enabled) {
       var radius, quantity, count = 0, angle = 0, data,
       startRadians = this.valueToRadians(this.options.min, this.options.max, this.options.endAngle, this.options.startAngle, this.options.min),
