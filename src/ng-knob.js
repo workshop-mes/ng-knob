@@ -68,7 +68,7 @@
         svg.append('circle')
             .attr('cx', this.options.size / 2)
             .attr('cy', 8)
-            .attr('r', 5)
+            .attr('r', 10)
             .attr('fill', '#4d4d4d');
     }
 
@@ -177,10 +177,6 @@
         .attr('transform', 'translate(' + ((this.options.size / 2)) + ', ' + ((this.options.size / 2) + (this.options.size*0.15)) + ')');
       }
     }
-      svg.append('circle')
-          .attr('cx', this.options.size / 2)
-          .attr('cy', 0)
-          .attr('r', 5);
     if(this.options.scale.enabled) {
       var radius, quantity, count = 0, angle = 0, data,
       startRadians = this.valueToRadians(this.options.min, this.options.max, this.options.endAngle, this.options.startAngle, this.options.min),
