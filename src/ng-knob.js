@@ -68,7 +68,7 @@
         svg.append('circle')
             .attr('cx', this.options.size / 2)
             .attr('cy', 8)
-            .attr('r', 10)
+            .attr('r', this.options.size / 72)
             .attr('fill', '#4d4d4d');
     }
 
